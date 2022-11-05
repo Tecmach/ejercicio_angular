@@ -35,11 +35,11 @@ export class RegistrosService {
 
 }
 export interface Registro{
-  id_registro?:string;
-  curp?:string;
-  nombre?:string;
-  apellido?:string;
-  apellido1?:string;
+  Id_registro?:string;
+  CURP?:string;
+  Nombre?:string;
+  primer_apellido?:string;
+  segundo_apellido?:string;
   instituto?:string;
 
 }
