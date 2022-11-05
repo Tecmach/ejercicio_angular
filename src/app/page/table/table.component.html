@@ -12,7 +12,7 @@
                 <div class="col-5">
                     <div class="row">
                         <div class="col-6">
-                            <button type="button" class="btn btn-outline" style="border: 3px solid #139EDD; color:#139EDD; font-weight: bold; border-radius: 30px; font-size: 17px;"><i class="bi bi-arrow-down-circle"></i> Descargar listado</button>
+                            <button type="button" class="btn btn-outline" (click)="exportToExcel()" style="border: 3px solid #139EDD; color:#139EDD; font-weight: bold; border-radius: 30px; font-size: 17px;"><i class="bi bi-arrow-down-circle"></i> Descargar listado</button>
                         </div>
                         <div class="col-6">
                             <button type="button" routerLink="/newregister" class="btn btn-outline" style="color:white; font-weight: bold; background-color: #139EDD; border-radius: 30px; font-size: 17px;"><i class="bi bi-plus-circle"></i> Nuevo registro</button>
@@ -20,7 +20,7 @@
                     </div>
                 </div>
             </div>
-            <table class="table table-striped text-center mt-4">
+            <table class="table table-striped text-center mt-4" id="data-table">
                 <thead>
                     <tr style="color: #139EDD; font-weight: bold">
                         <th scope="col">Folio</th>
