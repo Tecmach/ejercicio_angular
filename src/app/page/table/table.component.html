@@ -1,5 +1,10 @@
 <div class="row g-4">
     <div class="col-12">
+        <div class="row">
+            <div class="col-xl-2 col-lg-3 col-md-3 col-sm-4">
+                <a routerLink="home" style="color: #139EDD; font-size:18px;" routerLinkActive="active" class="nav-item nav-link"><i class="bi bi-journal-text"></i>Registros |</a>
+            </div>
+        </div>
         <div class="bg-white h-auto p-4" style="border-radius: 20px;">
             <div class="row">
                 <div class="col-7">
@@ -41,7 +46,7 @@
                                 <div class=" col-xl-4 col-lg-4 col-md-6 col-sm-8 col-xs-12" style="float: none; margin: 0 auto;">
                                     <div class="row">
                                         <div class="col-4">
-                                            <button class="rounded-circle" style="background-color: #EFF3F8; border: 0.5px solid white;"> <i class="bi bi-eye-fill" style="color: #139EDD"></i></button>
+                                            <button class="rounded-circle" [routerLink]="['/seeUser/', list.Id_registro]" routerLinkActive="router-link-active" style="background-color: #EFF3F8; border: 0.5px solid white;"> <i class="bi bi-eye-fill" style="color: #139EDD"></i></button>
                                         </div>
                                         <div class="col-4">
                                             <button class="rounded-circle" [routerLink]="['/edit/', list.Id_registro]" routerLinkActive="router-link-active" style="background-color: #EFF3F8; border: 0.5px solid white;"> <i class="bi bi-pencil" style="color: #139EDD"></i></button>

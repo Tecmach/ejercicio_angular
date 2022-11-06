@@ -17,12 +17,14 @@ import {FormsModule} from '@angular/forms';
 import { EditComponent } from './page/edit/edit.component';
 
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { SeeComponent } from './page/see/see.component';
 @NgModule({
   declarations: [
     AppComponent,
     RegisterComponent,
     TableComponent,
-    EditComponent
+    EditComponent,
+    SeeComponent
   ],
   imports: [
     BrowserModule,
