@@ -9,13 +9,15 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class EditComponent implements OnInit {
   id:string="";
-  registroActual:any={Id_registro:'',CURP:'',Nombre:'', primer_apellido:'', segundo_apellido:'', instituto:''}
+  registroActual:Registro={Id_registro:'',CURP:'',Nombre:'', primer_apellido:'', segundo_apellido:'', instituto:''}
   constructor(private RegistrosService: RegistrosService, private activateRouter: ActivatedRoute, private route:Router) { }
 
   ngOnInit(): void {
     this.id = this.activateRouter.snapshot.params['id'];
     this.RegistrosService.getunRegistro(this.id).subscribe(
-      res=>{this.registroActual=res, console.log(this.registroActual)},
+      res=>{
+        this.registroActual=res;
+         console.log(this.registroActual)},
       err=> console.log(err)
     )
   }
