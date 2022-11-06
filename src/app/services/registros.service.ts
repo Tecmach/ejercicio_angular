@@ -41,5 +41,4 @@ export interface Registro{
   primer_apellido?:string;
   segundo_apellido?:string;
   instituto?:string;
-
 }

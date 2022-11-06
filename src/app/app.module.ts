@@ -15,6 +15,8 @@ import { TableComponent } from './page/table/table.component';
 import {HttpClientModule} from '@angular/common/http';
 import {FormsModule} from '@angular/forms';
 import { EditComponent } from './page/edit/edit.component';
+
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,7 +35,8 @@ import { EditComponent } from './page/edit/edit.component';
     MatIconModule,
     MatListModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    Ng2SearchPipeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -9,6 +9,7 @@ import * as XLSX from 'xlsx';
 })
 export class TableComponent implements OnInit {
   lista:any=[];
+  searchText: any;
   name = 'ExcelSheet.xlsx';
   constructor(private RegistrosService: RegistrosService) { }
 
@@ -21,6 +22,7 @@ export class TableComponent implements OnInit {
       err=> console.log(err)
     )
   }
+
 
   exportToExcel(): void {
     let element = document.getElementById('data-table');

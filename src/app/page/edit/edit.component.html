@@ -1,44 +1,42 @@
 <div class="row vh-100 bg-white   mx-0" style="border-radius: 20px;">
-    <div class="row">
-        <div class="col-12">
-            <form action="">
-                <div class="row">
-                    <div class="col-4  mx-3 mt-5">
-                        <label for="CURP" class="form-label"><p>CURP <b style="color: #139EDD">*</b></p> </label>
-                        <input type="text" class="border-bottom form-control inputsData" id="CURP" name="CURP" [(ngModel)]="registroActual.CURP" maxlength="18" minlength="18" style="text-transform: uppercase; ">
+  <div class="row">
+      <div class="col-12">
+              <div class="row" *ngFor="let list of registroActual">
+                  <div class="col-4  mx-3 mt-5">
+                      <label for="CURP" class="form-label"><p>CURP <b style="color: #139EDD">*</b></p> </label>
+                      <input type="text" class="border-bottom form-control inputsData" id="CURP" name="CURP" value=`{{list.CURP}}` maxlength="18" minlength="18" style="text-transform: uppercase; ">
 
-                    </div>
-                    <div class="col-12">
-                        <div class="row mx-2 mt-4">
-                            <div class="col-4">
-                                <label for="Nombre" class="form-label"><p>Nombre (s) <b style="color: #139EDD">*</b></p> </label>
-                                <input type="text" required class="border-bottom form-control inputsData" id="Nombre" name="Nombre" [(ngModel)]="registroActual.Nombre">
-                            </div>
-                            <div class="col-4">
-                                <label for="primer_apellido" class="form-label"><p>Primer Apellido<b style="color: #139EDD">*</b></p> </label>
-                                <input type="text" required class="border-bottom form-control inputsData" id="primer_apellido" name="primer_apellido" [(ngModel)]="registroActual.primer_apellido">
-                            </div>
-                            <div class="col-4">
-                                <label for="segundo_apellido" class="form-label"><p>Segundo Apellido<b style="color: #139EDD">*</b></p> </label>
-                                <input type="text" required class="border-bottom form-control inputsData" id="segundo_apellido" name="segundo_apellido" [(ngModel)]="registroActual.segundo_apellido">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12">
-                        <div class="row mx-2 mt-4">
-                            <div class="col-4">
-                                <label for="instituto" class="form-label"><p>Institución <b style="color: #139EDD">*</b></p> </label>
-                                <input type="text" required class="border-bottom form-control inputsData" id="instituto" name="instituto" [(ngModel)]="registroActual.instituto">
-                            </div>
-                            <div class="col-4">
-                                <button type="button" (click)="guardar()" class="btn btn-outline mt-5 w-75" style="color:white; font-weight: bold; background-color: #139EDD; border-radius: 30px; font-size: 17px;">Guardar</button>
-                            </div>
-                        </div>
-                    </div>
+                  </div>
+                  <div class="col-12">
+                      <div class="row mx-2 mt-4">
+                          <div class="col-4">
+                              <label for="Nombre" class="form-label"><p>Nombre (s) <b style="color: #139EDD">*</b></p> </label>
+                              <input type="text" required class="border-bottom form-control inputsData" id="Nombre" name="Nombre" [(ngModel)]="registroActual.Nombre">
+                          </div>
+                          <div class="col-4">
+                              <label for="primer_apellido" class="form-label"><p>Primer Apellido<b style="color: #139EDD">*</b></p> </label>
+                              <input type="text" required class="border-bottom form-control inputsData" id="primer_apellido" name="primer_apellido" [(ngModel)]="registroActual.primer_apellido">
+                          </div>
+                          <div class="col-4">
+                              <label for="segundo_apellido" class="form-label"><p>Segundo Apellido<b style="color: #139EDD">*</b></p> </label>
+                              <input type="text" required class="border-bottom form-control inputsData" id="segundo_apellido" name="segundo_apellido" [(ngModel)]="registroActual.segundo_apellido">
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-12">
+                      <div class="row mx-2 mt-4">
+                          <div class="col-4">
+                              <label for="instituto" class="form-label"><p>Institución <b style="color: #139EDD">*</b></p> </label>
+                              <input type="text" required class="border-bottom form-control inputsData" id="instituto" name="instituto" [(ngModel)]="registroActual.instituto">
+                          </div>
+                          <div class="col-4">
+                              <button type="button" (click)="guardar()" class="btn btn-outline mt-5 w-75" style="color:white; font-weight: bold; background-color: #139EDD; border-radius: 30px; font-size: 17px;">Guardar</button>
+                          </div>
+                      </div>
+                  </div>
 
-                </div>
-            </form>
-        </div>
+              </div>
+      </div>
 
-    </div>
+  </div>
 </div>

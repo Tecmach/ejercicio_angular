@@ -3,9 +3,9 @@
         <div class="bg-white h-auto p-4" style="border-radius: 20px;">
             <div class="row">
                 <div class="col-7">
-                    <div class="col-3">
+                    <div class="col-4">
                         <form class="d-none d-md-flex ">
-                            <input class="form-control border-0 " type="search" style="background-color: #F4F5FB; color: gray; border-radius: 30px;" placeholder="Buscar">
+                            <input class="form-control border-0 " name="search" [(ngModel)]="searchText" autocomplete="on" type="text" style="background-color: #F4F5FB; color: gray; border-radius: 30px;" placeholder="Buscar">
                         </form>
                     </div>
                 </div>
@@ -31,7 +31,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr *ngFor="let list of lista">
+                    <tr *ngFor="let list of lista | filter:searchText">
                         <th scope="row">{{list.Id_registro}}</th>
                         <td>{{ list.CURP}}</td>
                         <td>{{list.Nombre +" " + list.primer_apellido + " " + list.segundo_apellido}}</td>

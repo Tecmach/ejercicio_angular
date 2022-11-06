@@ -9,7 +9,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class EditComponent implements OnInit {
   id:string="";
-  registroActual: Registro={Id_registro:'',CURP:'',Nombre:'', primer_apellido:'', segundo_apellido:'', instituto:''}
+  registroActual:any={Id_registro:'',CURP:'',Nombre:'', primer_apellido:'', segundo_apellido:'', instituto:''}
   constructor(private RegistrosService: RegistrosService, private activateRouter: ActivatedRoute, private route:Router) { }
 
   ngOnInit(): void {
